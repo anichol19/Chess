@@ -62,7 +62,14 @@ public class Board {
 	}
 	
 	public Board updateState(Move m) {
-		//board[m.
+		if( !m.wasCapture() ) {
+			//play sound?
+			//Move old piece to "graveyard"
+		}
+		board[m.newR()][m.newC()] = board[m.currR()][m.currC()];
+		board[m.newR()][m.newC()].setCol(m.newC());
+		board[m.newR()][m.newC()].setRow(m.newR());
+		board[m.currR()][m.currC()] = null;
 		return this;
 	}
 	

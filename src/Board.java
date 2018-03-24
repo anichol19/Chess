@@ -61,4 +61,9 @@ public class Board {
 		return board;
 	}
 	
+	public Board updateState(Move m) {
+		//board[m.
+		return this;
+	}
+	
 }

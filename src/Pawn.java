@@ -7,45 +7,45 @@ public class Pawn extends Piece {
 	}
 	public ArrayList<Move> findValidMoves(Board board){
 		ArrayList<Move> vm = new ArrayList<Move>();
-		int x = this.getX();
-		int y = this.getY();
+		int row = this.getRow();
+		int col = this.getCol();
 		Piece[][] cb = board.getBoard();
 		//White moving "Up"
 		if( this.isWhite() ) {
 			//forward movements
-			if( (y - 1 >= 0 ) && cb[x][y - 1] == null) {
-				vm.add(new Move(x, y, x, y - 1 , false));
+			if( ( row - 1 >= 0 ) && cb[row-1][col] == null) {
+				vm.add(new Move(row, col, row-1, col , false));
 				//Double move if it hasn't moved
-				if( !this.hasMoved() && (y - 2 >= 0) && cb[x][y - 2] == null) {
-					vm.add( new Move(x, y, x, y - 2, false));
+				if( !this.hasMoved() && (row - 2 >= 0) && cb[row-2][col] == null) {
+					vm.add( new Move(row, col, row-2, col, false));
 				}
 			}
 			//Right capture
-			if( (x + 1 < 8) && (y - 1 >= 0) && cb[x+1][y-1] != null ) {
-				vm.add( new Move(x, y, x+1, y-1, true));
+			if( (col + 1 < 8) && (row - 1 >= 0) && cb[row-1][col+1] != null && !cb[row-1][col+1].isWhite() ) {
+				vm.add( new Move(row, col, row-1, col+1, true));
 			}
 			//Left capture
-			if( (x - 1 >= 0) && (y - 1 >= 0) && cb[x-1][y-1] != null ) {
-				vm.add( new Move(x, y, x-1, y-1, true));
+			if( (row - 1 >= 0) && (col - 1 >= 0) && cb[row-1][col-1] != null && !cb[row-1][col-1].isWhite() ) {
+				vm.add( new Move(row, col, row-1, col-1, true));
 			}
 		}
 		//Black, moving "Down"
 		else {
 			//forward movements
-			if( (y + 1 < 8 ) && cb[x][y + 1] == null) {
-				vm.add(new Move(x, y, x, y + 1 , false));
+			if( (row + 1 < 8 ) && cb[row+1][col] == null) {
+				vm.add(new Move(row, col, row+1, col , false));
 				//Double move if it hasn't moved
-				if( !this.hasMoved() && (y + 2  < 8 ) && cb[x][y + 2] == null) {
-					vm.add( new Move(x, y, x, y - 2, false));
+				if( !this.hasMoved() && (row + 2  < 8 ) && cb[row+2][col] == null) {
+					vm.add( new Move(row, col, row +2, col, false));
 				}
 			}
 			//Right capture
-			if( (x + 1 < 8) && (y + 1 < 8) && cb[x+1][y+1] != null ) {
-				vm.add( new Move(x, y, x+1, y+1, true));
+			if( (col + 1 < 8) && (row + 1 < 8) && cb[row+1][col+1] != null && cb[row+1][col+1].isWhite() ) {
+				vm.add( new Move(row, col, row+1, col+1, true));
 			}
 			//Left capture
-			if( (x - 1 >= 0) && (y + 1 < 8) && cb[x-1][y+1] != null ) {
-				vm.add( new Move(x, y, x-1, y+1, true));
+			if( (col - 1 >= 0) && (row + 1 < 8) && cb[row+1][col-1] != null && cb[row+1][col-1].isWhite() ) {
+				vm.add( new Move(row, col, row+1, col-1, true));
 			}
 		}
 		return vm;

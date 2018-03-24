@@ -64,6 +64,7 @@ public class Bishop extends Piece {
 			else if (cb[row2][col2] != null)
 				break;
 		}
+		return vm;
 	}
 	
 	public String toString()

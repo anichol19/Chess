@@ -32,4 +32,23 @@ public class Move {
 		 return newC;
 	}
 	
+	public String toString() {
+		String here = "";
+		for( int i = 0 ; i < 8 ; i++ ) {
+			for( int j = 0 ; j < 8 ; j++ ) {
+				if( i == this.currR() && j == this.currC()) {
+					here += "[S]";
+				}
+				else if( i == this.newR() && j == this.newC()){
+					here += "[F]";
+				}
+				else {
+					here += "[ ]";
+				}
+			}
+			here += "\n";
+		}
+		return here;
+	}
+	
 }

@@ -55,14 +55,22 @@ public class Board {
 			for (j = 0; j < 8; j++)
 			{
 				if(board[i][j] == null) {
-					System.out.print("  ");
+					System.out.print("    ");
 				}
 				else {
-					System.out.print(board[i][j] + " ");
+					String color = "";
+					if(board[i][j].isWhite()) {
+						color = "W";
+					}
+					else {
+						color = "B";
+					}
+					System.out.print(board[i][j] + color + "  " );
 				}
 			}
 			System.out.println();
 		}
+		System.out.println();
 	}
 	
 	public Piece[][] getBoard() {

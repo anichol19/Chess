@@ -1,8 +1,11 @@
+import java.util.ArrayList;
 
 public abstract class Piece {
 
 	private int currY, currX;
 	private boolean isWhite, wasCaptured, hasMoved;
+	
+	public abstract ArrayList<Move> findValidMoves(Board board);
 	
 	public Piece(int y, int x, boolean isWhite)
 	{

@@ -4,16 +4,18 @@ public abstract class Piece {
 
 	private int currRow, currCol;
 	private boolean isWhite, wasCaptured, hasMoved;
+	private String image;
 	
 	public abstract ArrayList<Move> findValidMoves(Board board);
 	
-	public Piece(int row, int col, boolean isWhite)
+	public Piece(int row, int col, boolean isWhite, String image)
 	{
 		currRow = row;
 		currCol = col;
 		this.isWhite = isWhite;
 		wasCaptured = false;
 		hasMoved = false;
+		this.image = image;
 	}
 	
 	public int getCol()

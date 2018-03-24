@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Rook extends Piece {
 
-	public Rook(int y, int x, boolean isWhite)
+	public Rook(int y, int x, boolean isWhite, String image)
 	{
-		super(y, x, isWhite);
+		super(y, x, isWhite, image);
 	}
 	
 	public ArrayList<Move> findValidMoves(Board board)

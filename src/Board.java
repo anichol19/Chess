@@ -1,11 +1,17 @@
 
 public class Board {
 	private Piece[][] board = new Piece[8][8];
-	private boolean isWon;
 	
 	public Board() {
-		//Initialize board start
-		isWon = false;
+		
+		int i, j;
+		for (i = 0; i < board.length; i++)
+		{
+			for (j = 0; j < board[0].length; j++)
+			{
+				if ()
+			}
+		}
 	}
 	
 	public Piece[][] getBoard() {

@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Pawn extends Piece {
 	
-	public Pawn( int x, int y, boolean isWhite) {
-		super(x, y, isWhite);
+	public Pawn( int x, int y, boolean isWhite, String image) {
+		super(x, y, isWhite, image);
 	}
 	public ArrayList<Move> findValidMoves(Board board){
 		ArrayList<Move> vm = new ArrayList<Move>();

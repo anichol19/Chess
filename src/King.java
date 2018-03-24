@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class King extends Piece {
 
-	public King(int y, int x, boolean isWhite)
+	public King(int y, int x, boolean isWhite, String image)
 	{
-		super(y, x, isWhite);
+		super(y, x, isWhite, image);
 	}
 	
 	public ArrayList<Move> findValidMoves(Board board)

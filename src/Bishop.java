@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Bishop extends Piece {
 
-	public Bishop(int y, int x, boolean isWhite)
+	public Bishop(int y, int x, boolean isWhite, String image)
 	{
-		super(y, x, isWhite);
+		super(y, x, isWhite, image);
 	}
 	
 	public ArrayList<Move> findValidMoves(Board board)

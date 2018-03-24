@@ -53,4 +53,7 @@ public class Rook extends Piece {
 		}
 		return possMoves;
 	}
+	public String toString() {
+		return "R";
+	}
 }

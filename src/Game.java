@@ -13,8 +13,11 @@ public class Game {
 		Piece[][] checkCheck = b.getBoard();
 		checkCheck[6][0] = null;
 		b = new Board(checkCheck);
+		b.displayBoard();
+		System.out.print("\n\n\n");
 		ArrayList<Move> rookCornerNoPawn = checkCheck[7][0].findValidMoves(b);
-		
+		b.updateState(rookCornerNoPawn.get(5));
+		b.displayBoard();
 		ArrayList<Move> middlePawn = checkCheck[6][1].findValidMoves(b);
 		//while (!g.isOver(b))
 		{

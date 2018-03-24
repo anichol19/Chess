@@ -47,15 +47,21 @@ public class Board {
 	public Board(Piece[][] b) {
 		board = b;
 	}
-	public void displayBoard(Board b)
+	public void displayBoard()
 	{
 		int i, j;
 		for (i = 0; i < 8; i++)
 		{
 			for (j = 0; j < 8; j++)
 			{
-				System.out.println(board[i][j]);
+				if(board[i][j] == null) {
+					System.out.print("  ");
+				}
+				else {
+					System.out.print(board[i][j] + " ");
+				}
 			}
+			System.out.println();
 		}
 	}
 	

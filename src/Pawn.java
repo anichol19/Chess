@@ -50,4 +50,8 @@ public class Pawn extends Piece {
 		}
 		return vm;
 	}
+	
+	public String toString() {
+		return "P";
+	}
 }

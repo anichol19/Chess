@@ -12,4 +12,9 @@ public class King extends Piece {
 		ArrayList<Move> possMoves = new ArrayList<Move>();
 		return possMoves;
 	}
+	
+	public String toString()
+	{
+		return "K";
+	}
 }

@@ -2,38 +2,38 @@ import java.util.ArrayList;
 
 public abstract class Piece {
 
-	private int currY, currX;
+	private int currRow, currCol;
 	private boolean isWhite, wasCaptured, hasMoved;
 	
 	public abstract ArrayList<Move> findValidMoves(Board board);
 	
-	public Piece(int y, int x, boolean isWhite)
+	public Piece(int row, int col, boolean isWhite)
 	{
-		currY = y;
-		currX = x;
+		currRow = row;
+		currCol = col;
 		this.isWhite = isWhite;
 		wasCaptured = false;
 		hasMoved = false;
 	}
 	
-	public int getX()
+	public int getCol()
 	{
-		return currX;
+		return currCol;
 	}
 	
-	public int getY()
+	public int getRow()
 	{
-		return currY;
+		return currRow;
 	}
 	
-	public void setX(int x)
+	public void setCol(int x)
 	{
-		currX = x;
+		currCol = x;
 	}
 	
-	public void setY(int y)
+	public void setRow(int y)
 	{
-		currY = y;
+		currRow = y;
 	}
 	
 	public boolean isWhite()

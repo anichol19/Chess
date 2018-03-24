@@ -1,7 +1,12 @@
 
 public class Player {
 
-	private boolean isWhite;
 	private String name;
+	private boolean isWhite;
+	
+	public Player(String name, boolean isWhite)
+	{
+		
+	}
 	
 }

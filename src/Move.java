@@ -1,13 +1,15 @@
 public class Move {
 	
-	private int currY, currX, newY, newX;
+	public int currY, currX, newY, newX;
+	private boolean wasCaptured;
 	
-	public Move(int cy, int cx, int ny, int nx)
+	public Move(int cy, int cx, int ny, int nx, boolean wasCaptured)
 	{
 		currY = cy;
 		currX = cx;
 		newY = ny;
 		newX = nx;
+		this.wasCaptured = wasCaptured;
 	}
 	
 }

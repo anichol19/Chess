@@ -1,3 +1,4 @@
+
 public abstract class Piece {
 	
 	private int currY, currX;

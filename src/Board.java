@@ -12,7 +12,7 @@ public class Board {
 				if (i == 1)
 					board[i][j] = new Pawn(i, j, false);
 				else if (i == 6)
-					board[i][j] = new Pawn(i, j, true);	
+					board[i][j] = new Pawn(i, j, true);
 				else
 					board[i][j] = null;
 			}

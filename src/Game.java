@@ -11,7 +11,10 @@ public class Game {
 		Player p2 = new Player("Opponent", false);
 		Board b = new Board();
 		Piece[][] checkCheck = b.getBoard();
-		checkCheck[2][2] = new Pawn(2,2,true);
+		checkCheck[6][0] = null;
+		b = new Board(checkCheck);
+		ArrayList<Move> rookCornerNoPawn = checkCheck[7][0].findValidMoves(b);
+		
 		ArrayList<Move> middlePawn = checkCheck[6][1].findValidMoves(b);
 		//while (!g.isOver(b))
 		{

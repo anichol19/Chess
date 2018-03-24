@@ -9,7 +9,12 @@ public class Board {
 		{
 			for (j = 0; j < board[0].length; j++)
 			{
-				if ()
+				if (i == 1)
+					board[i][j] = new Pawn(i, j, false);
+				else if (i == 6)
+					board[i][j] = new Pawn(i, j, true);	
+				else
+					board[i][j] = null;
 			}
 		}
 	}
